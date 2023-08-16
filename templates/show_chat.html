@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="\static\plugins\bootstrap-5.3.0\css\bootstrap.css">
+</head>
+<body>
+    <div calss="container">
+    <h1>展示对话</h1>
+    <form action="/show/chat/">
+        <div>
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>input</th>
+                    <th>reply</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data_list %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.input}}</td>
+                    <td>{{item.reply}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </form>
+    </div>
+    <script src="\static\js\jquery-3.6.4.min.js"></script>
+    <script src="\static\plugins\bootstrap-5.3.0\js\bootstrap.js"></script>
+</body>
+</html>
