@@ -1,7 +1,23 @@
 from flask import Flask,render_template,request
 import pymysql
-from openai_test import generate_text
 app=Flask(__name__)
+import openai
+openai.api_key = "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"
+
+def generate_text(prompt):
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=prompt,
+        max_tokens=260,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    message = response.choices[0].text.strip()
+    print(message)
+    return message
+
 
 
 @app.route("/",methods=["GET","POST"])
