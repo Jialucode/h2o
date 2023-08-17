@@ -1,7 +1,7 @@
 {
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/templates/(.*)",
             "destination": "/api.py"
         }
     ]
