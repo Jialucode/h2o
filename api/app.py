@@ -8,7 +8,7 @@ def generate_text(prompt):
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
-        max_tokens=260,
+        max_tokens=20,
         n=1,
         stop=None,
         temperature=0.5,
